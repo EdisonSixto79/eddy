@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Navidad</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-top: 50px;
+            color: #ffd700;
+            text-shadow: 2px 2px 5px #000;
+        }
+        .tree {
+            margin: 50px auto;
+            width: 0;
+            height: 0;
+            position: relative;
+        }
+        .tree .triangle {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+        }
+        .triangle:nth-child(1) {
+            border-bottom: 120px solid green;
+            top: 0;
+        }
+        .triangle:nth-child(2) {
+            border-bottom: 140px solid green;
+            top: 90px;
+        }
+        .triangle:nth-child(3) {
+            border-bottom: 160px solid green;
+            top: 200px;
+        }
+        .star {
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            color: gold;
+        }
+        .lights span {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            border-radius: 50%;
+            animation: blink 2s infinite;
+        }
+        .lights span:nth-child(2) { top: 80px; left: 45%; background-color: yellow; animation-delay: 0.5s; }
+        .lights span:nth-child(3) { top: 130px; left: 55%; background-color: blue; animation-delay: 1s; }
+        .lights span:nth-child(4) { top: 190px; left: 40%; background-color: pink; animation-delay: 1.5s; }
+        .lights span:nth-child(5) { top: 250px; left: 60%; background-color: orange; animation-delay: 2s; }
+
+        @keyframes blink {
+            50% { opacity: 0.5; }
+        }
+        footer {
+            margin-top: 50px;
+            font-size: 1.2rem;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Feliz Navidad y Próspero Año Nuevo</h1>
+    <div class="tree">
+        <div class="star">★</div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="lights">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <footer>Con cariño, Edison Vega</footer>
+</body>
+</html>
